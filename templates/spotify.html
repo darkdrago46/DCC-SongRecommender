@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="/">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/spotify.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>    
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@700&family=Rubik:ital,wght@1,800&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/9357877881.js" crossorigin="anonymous"></script>
+    <title>Spotify</title>
+</head>
+<body>
+    <h1>Song Recommender</h1>
+    <form name="passData" action="/predict" method='POST'>
+        <div id="divStyle">
+            <div class="field">
+                <label class="label" for="urlReq">-Enter the Spotify link-</label>
+                    <div class="control has-icons-left has-icons-right" id='textBox'>
+                        <input class="input is-rounded" name="urlName" type="text" id="urlReq" placeholder="Copy and paste link here">
+                        <span class="icon is-small is-left">
+                            <i class="fas fa-link"></i>
+                        </span>
+                    </div>
+                    <button class="button is-primary is-halfwidth is-rounded" type="submit">Test Link</button>
+                    <button class="button is-danger is-halfwidth is-rounded" type="button">Reset</button>
+            </div>
+        </div>
+    </form>
+    <div>
+        <progress class="progress is-small is-primary" max="100">15%</progress>
+    </div>
+    <div id="displayEle">
+            <div>
+           <!--- {% if pred=="Secure" %} <i class="fas fa-thumbs-up" id="invertedUp"></i>
+            {% elif pred=="Not Secure" %} <i class="fas fa-thumbs-down" id="invertedDown"></i> {% endif %} --->
+            
+            <ul>
+                {% for song in pred %}
+                    <li>{{ song }}</li>
+                {% endfor %}
+            </ul>
+            <!--- {% if pred=="Secure" %} <i class="fas fa-thumbs-up"></i>
+            {% elif pred=="Not Secure" %} <i class="fas fa-thumbs-down"></i> {% endif %} --->
+            </div>
+        <p>{{urlDisplay}}</p>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="static/js/spotify.js" language="JavaScript" type="text/javascript" ></script>
+</body>
+</html>

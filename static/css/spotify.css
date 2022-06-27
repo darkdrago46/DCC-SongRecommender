@@ -1,0 +1,87 @@
+html{
+    background: #2c3e50;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #3498db, #2c3e50);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #3498db, #2c3e50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+h1{
+    background: #c2e59c;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #64b3f4, #c2e59c);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #64b3f4, #c2e59c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    font-family: Georgia, sans-serif;
+    font-size: 4.5em;
+    letter-spacing: -1px;
+    color: black;
+    text-align: center;
+    margin-top: 0.3em;
+    font-weight: bolder;
+}
+
+#divStyle{
+    width: 65%;
+    margin: 100px auto;
+}
+
+.label{
+	font-family: 'Karla', sans-serif;
+	font-weight:bolder;
+	color:white;
+    font-size: 2em;
+    text-align: center;
+    text-shadow: 2px 2px black;
+}
+
+#textBox{
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+form{
+    text-align: center;
+    margin: 20px auto;
+}
+
+button{
+    width: 20em;
+    font-weight: bold;
+    margin: 1.5em;
+}
+
+h3{
+    font-size: 3.5em;
+    color:white;
+    font-weight: bold;
+    text-shadow: 3px 3px black;
+    text-align: center;
+}
+
+.progress{
+    display: none;
+    margin: auto 43em;
+    width: revert;
+}
+
+p{
+    color:gold;
+    font-weight: bold;
+    text-align: center;
+}
+
+#invertedUp, #invertedDown{
+    transform: scaleX(-1);
+}   
+
+ul {
+    padding-left: 10rem;
+    margin:20px;
+    border: 2px solid grey;
+  }
+
+li {
+    margin: 5px;
+    list-style: disc;
+    font-family: Georgia, sans-serif;
+    font-size: 2rem;
+    color: black;
+  }
